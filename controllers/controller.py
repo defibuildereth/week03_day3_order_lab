@@ -12,8 +12,8 @@ def one_by_index(index):
 
 @app.route('/order/name/<name>')
 def one_by_name(name):
-    relevant_order = []
+    relevant_orders = []
     for order in orders:
         if order.customer_object.name.lower() == name.lower():
-            relevant_order.append(order)
-    return render_template('order_by_name.html', orders = relevant_order)
+            relevant_orders.append(order)
+    return render_template('order_by_name.html', orders = relevant_orders)
