@@ -11,7 +11,7 @@
     <h1>Table Tennis Shop</h1>
     <h2>Here are the orders</h2>
     {% for order in orders %}
-        <p><a href="/order/name/{{order.customer_object.name}}">{{order.customer_object.name}}</a> ordered <a href="/order/{{orders.index(order)+1}}">{{order.quantity}} {{order.description}}</a> at {{order.order_date}}</p>
+        <p><a href="/order/name/{{order.customer_object.name}}">{{order.customer_object.name}}</a> ordered <a href="/order/{{orders.index(order)+1}}">{{order.quantity}} {{order.product_object.name}}</a> at {{order.order_date}}</p>
     {% endfor %}
 </body>
 </html>
