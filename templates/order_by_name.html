@@ -9,6 +9,8 @@
 <body>
     <h1>Table Tennis Shop</h1>
     <h2>Here is one order</h2>
-        <p>{{order.customer_name}} ordered {{order.quantity}} {{order.description}} at {{order.order_date}}</p>
+    {% for order in orders %}
+        <p>{{order.customer_object.name}} ordered {{order.quantity}} {{order.description}} at {{order.order_date}}</p>
+    {% endfor %}
 </body>
 </html>

@@ -12,7 +12,9 @@ def one_by_index(index):
 
 @app.route('/order/name/<name>')
 def one_by_name(name):
+    relevant_order = []
     for order in orders:
-        if order.customer_name.lower() == name.lower():
-            return render_template('order_by_name.html', order = order)
-            
+        if order.customer_object.name.lower() == name.lower():
+            relevant_order.append(order)
+    print(f'{len(relevant_order)}!!!!!!!!!!!!!!!!!!')
+    return render_template('order_by_name.html', orders = relevant_order)
