@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Whatever</h1>
+    <h1>Table Tennis Shop</h1>
     <h2>Here are the orders</h2>
     {% for order in orders %}
-        <p>{{order}}</p>
+        <p>{{order.customer_name}} ordered {{order.quantity}} {{order.description}} at {{order.order_date}}</p>
     {% endfor %}
 </body>
 </html>
